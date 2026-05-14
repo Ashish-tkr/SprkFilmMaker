@@ -1,0 +1,418 @@
+/* =========================================================
+FILE: frontend/style.css
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050505;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* =========================
+    LOADER
+========================= */
+
+#loader{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:#000;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:5px solid #333;
+  border-top:5px solid gold;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================
+    NAVBAR
+========================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:gold;
+}
+
+.logo span{
+  color:#fff;
+}
+
+nav a{
+  margin-left:25px;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:gold;
+}
+
+/* =========================
+    HERO
+========================= */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.7),
+  rgba(0,0,0,0.8)),
+  url("banner.jpeg") center/cover no-repeat;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero-content{
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:70px;
+  font-weight:800;
+  color:gold;
+  text-shadow:0 0 25px gold;
+}
+
+.hero h1 span{
+  display:block;
+  color:#fff;
+}
+
+.tagline{
+  margin-top:15px;
+  font-size:24px;
+  color:#ffb347;
+}
+
+.hero-description{
+  margin-top:20px;
+  line-height:1.8;
+  color:#ddd;
+}
+
+.hero-btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 40px;
+  border-radius:50px;
+  background:linear-gradient(45deg,gold,#ff6600);
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.4s;
+}
+
+.hero-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px gold;
+}
+
+/* =========================
+    SECTION
+========================= */
+
+.section{
+  padding:100px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-size:45px;
+  color:gold;
+}
+
+/* =========================
+    GLASS CARD
+========================= */
+
+.glass-card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 0 30px rgba(255,215,0,0.2);
+}
+
+/* =========================
+    ABOUT
+========================= */
+
+.about-container{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-container p{
+  margin-bottom:20px;
+  line-height:1.8;
+  color:#ddd;
+}
+
+/* =========================
+    CATEGORY
+========================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.category-card{
+  background:#111;
+  border:1px solid #333;
+  border-radius:20px;
+  padding:40px 20px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.category-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px gold;
+}
+
+.category-card .icon{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.category-card h3{
+  color:gold;
+}
+
+/* =========================
+    FORM
+========================= */
+
+.form-container{
+  max-width:900px;
+  margin:auto;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.form-group{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  outline:none;
+  background:#111;
+  color:#fff;
+}
+
+.form-group textarea{
+  height:120px;
+  resize:none;
+}
+
+.form-group label{
+  position:absolute;
+  top:16px;
+  left:16px;
+  pointer-events:none;
+  transition:0.3s;
+  color:#999;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label{
+  top:-10px;
+  left:10px;
+  background:#000;
+  padding:0 5px;
+  color:gold;
+  font-size:12px;
+}
+
+.payment-box{
+  margin:20px 0;
+  font-size:24px;
+  text-align:center;
+}
+
+.payment-box span{
+  color:gold;
+  font-weight:700;
+}
+
+.submit-btn{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(45deg,gold,#ff6600);
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.submit-btn:hover{
+  transform:scale(1.02);
+  box-shadow:0 0 25px gold;
+}
+
+/* =========================
+    POPUP
+========================= */
+
+.popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.popup-content{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  max-width:400px;
+  width:90%;
+}
+
+.popup-content i{
+  font-size:70px;
+  color:lime;
+}
+
+.popup-content h2{
+  margin:20px 0;
+}
+
+.popup-content button{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  background:gold;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* =========================
+    CONTACT
+========================= */
+
+.contact-container{
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+
+.contact-container p{
+  margin:20px 0;
+  font-size:18px;
+}
+
+.contact-container i{
+  color:gold;
+  margin-right:10px;
+}
+
+/* =========================
+    FOOTER
+========================= */
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#000;
+  color:#aaa;
+}
+
+/* =========================
+    RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+  }
+
+}

@@ -1,0 +1,321 @@
+<!-- =========================================================
+FILE: frontend/index.html
+PROJECT: INDIA SPARK TALENT SHOW
+TECH: HTML + CSS + JavaScript
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>INDIA SPARK TALENT SHOW</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+        LOADER
+  ========================== -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- =========================
+        NAVBAR
+  ========================== -->
+  <header class="navbar">
+    <div class="logo">
+      <span>INDIA</span> SPARK
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#categories">Categories</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+        HERO SECTION
+  ========================== -->
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>
+        INDIA SPARK
+        <span>TALENT SHOW</span>
+      </h1>
+
+      <p class="tagline">
+        “India Ka Talent, India Ki Pehchaan”
+      </p>
+
+      <p class="hero-description">
+        Showcase your talent on a national platform.
+        Singing, Dancing, Acting, Modelling & Rapping.
+      </p>
+
+      <a href="#register" class="hero-btn">
+        Register Now
+      </a>
+
+    </div>
+  </section>
+
+  <!-- =========================
+        ABOUT SECTION
+  ========================== -->
+  <section class="about section" id="about">
+
+    <div class="section-title">
+      <h2>About Event</h2>
+    </div>
+
+    <div class="about-container glass-card">
+
+      <p>
+        INDIA SPARK TALENT SHOW is a premium national-level
+        talent competition platform created to discover
+        India's next superstar.
+      </p>
+
+      <p>
+        Whether you are a singer, dancer, actor,
+        model or rapper — this stage is for you.
+      </p>
+
+      <p>
+        Perform, shine, and get recognized nationally.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- =========================
+        TALENT CATEGORIES
+  ========================== -->
+  <section class="categories section" id="categories">
+
+    <div class="section-title">
+      <h2>Talent Categories</h2>
+    </div>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <div class="icon">🎤</div>
+        <h3>Singing</h3>
+      </div>
+
+      <div class="category-card">
+        <div class="icon">💃</div>
+        <h3>Dancing</h3>
+      </div>
+
+      <div class="category-card">
+        <div class="icon">🎭</div>
+        <h3>Acting</h3>
+      </div>
+
+      <div class="category-card">
+        <div class="icon">👑</div>
+        <h3>Modelling</h3>
+      </div>
+
+      <div class="category-card">
+        <div class="icon">🎧</div>
+        <h3>Rapping</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+        REGISTRATION FORM
+  ========================== -->
+  <section class="register section" id="register">
+
+    <div class="section-title">
+      <h2>Contestant Registration</h2>
+    </div>
+
+    <form id="registrationForm" class="glass-card form-container">
+
+      <div class="form-group">
+        <input type="text" id="fullName" required />
+        <label>Full Name</label>
+      </div>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <input type="number" id="age" required />
+          <label>Age</label>
+        </div>
+
+        <div class="form-group">
+          <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <input type="text" id="mobile" required />
+          <label>Mobile Number</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="whatsapp" required />
+          <label>WhatsApp Number</label>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" required />
+        <label>Email Address</label>
+      </div>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <input type="text" id="state" required />
+          <label>State</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="city" required />
+          <label>City</label>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <textarea id="address" required></textarea>
+        <label>Full Address</label>
+      </div>
+
+      <div class="form-group">
+        <select id="category" required>
+          <option value="">Select Talent Category</option>
+          <option>Singing</option>
+          <option>Dancing</option>
+          <option>Acting</option>
+          <option>Modelling</option>
+          <option>Rapping</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="instagram" />
+        <label>Instagram Profile Link</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="socialLink" />
+        <label>YouTube / Facebook Link</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="aboutYourself" required></textarea>
+        <label>About Yourself</label>
+      </div>
+
+      <div class="payment-box">
+        Registration Fee:
+        <span>₹500</span>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Register & Pay
+      </button>
+
+    </form>
+  </section>
+
+  <!-- =========================
+        SUCCESS POPUP
+  ========================== -->
+  <div class="popup" id="successPopup">
+    <div class="popup-content">
+      <i class="fa-solid fa-circle-check"></i>
+      <h2>Payment Successful!</h2>
+      <p>Your registration has been completed.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- =========================
+        CONTACT SECTION
+  ========================== -->
+  <section class="contact section" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-container glass-card">
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 7719740950
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        indiasparkshow@gmail.com
+      </p>
+
+      <p>
+        <i class="fa-brands fa-instagram"></i>
+        @spark_filmmaker
+      </p>
+
+    </div>
+  </section>
+
+  <!-- =========================
+        FOOTER
+  ========================== -->
+  <footer>
+    <p>
+      © 2026 INDIA SPARK TALENT SHOW | All Rights Reserved
+    </p>
+  </footer>
+
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
